@@ -28,7 +28,7 @@ class OrderProcessTest {
 
         order.setProducts(products);
 
-        int result = service.doProcess(order, 200);
+        int result = service.doProcess(order);
 
         Assertions.assertThat(result)
                 .isEqualTo(65);

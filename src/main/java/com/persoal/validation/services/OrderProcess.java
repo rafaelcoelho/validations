@@ -6,13 +6,12 @@ import org.springframework.stereotype.Service;
 import org.springframework.validation.annotation.Validated;
 
 import javax.validation.Valid;
-import javax.validation.constraints.Min;
 
 @Service
 @Validated
 public class OrderProcess {
 
-    public int doProcess(@Valid Order order, @Valid @Min(400) int price2) {
+    public int doProcess(@Valid Order order) {
         return order.getProducts().stream()
                 .map(Products::getPrice)
                 .filter(price -> price < 500)
