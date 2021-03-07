@@ -13,5 +13,5 @@ public class Order {
     @NonNull
     private final String number;
     @NotEmpty
-    private final List<Products> products;
+    private List<Products> products;
 }
